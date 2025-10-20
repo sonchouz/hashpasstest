@@ -1,0 +1,115 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nikon\\source\\repos\\HashPass_Test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54ED3D21-6177-468F-866F-9C72C8539E87}|HashPass_Test\\HashPass_Test.csproj|c:\\users\\nikon\\source\\repos\\hashpass_test\\hashpass_test\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54ED3D21-6177-468F-866F-9C72C8539E87}|HashPass_Test\\HashPass_Test.csproj|solutionrelative:hashpass_test\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54ED3D21-6177-468F-866F-9C72C8539E87}|HashPass_Test\\HashPass_Test.csproj|C:\\Users\\nikon\\source\\repos\\HashPass_Test\\hashpass_test\\models\\model1.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54ED3D21-6177-468F-866F-9C72C8539E87}|HashPass_Test\\HashPass_Test.csproj|solutionrelative:hashpass_test\\models\\model1.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54ED3D21-6177-468F-866F-9C72C8539E87}|HashPass_Test\\HashPass_Test.csproj|C:\\Users\\nikon\\source\\repos\\HashPass_Test\\hashpass_test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54ED3D21-6177-468F-866F-9C72C8539E87}|HashPass_Test\\HashPass_Test.csproj|solutionrelative:hashpass_test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{651134F0-C574-481C-9FBF-F7714D0A0343}|HashPasswords\\HashPasswords.csproj|C:\\Users\\nikon\\source\\repos\\HashPass_Test\\hashpasswords\\hash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{651134F0-C574-481C-9FBF-F7714D0A0343}|HashPasswords\\HashPasswords.csproj|solutionrelative:hashpasswords\\hash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54ED3D21-6177-468F-866F-9C72C8539E87}|HashPass_Test\\HashPass_Test.csproj|C:\\Users\\nikon\\source\\repos\\HashPass_Test\\hashpass_test\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{54ED3D21-6177-468F-866F-9C72C8539E87}|HashPass_Test\\HashPass_Test.csproj|solutionrelative:hashpass_test\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "C:\\Users\\nikon\\source\\repos\\HashPass_Test\\HashPass_Test\\Helper.cs",
+              "RelativeDocumentMoniker": "HashPass_Test\\Helper.cs",
+              "ToolTip": "C:\\Users\\nikon\\source\\repos\\HashPass_Test\\HashPass_Test\\Helper.cs",
+              "RelativeToolTip": "HashPass_Test\\Helper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwCAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T10:57:49.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Model1.Context.cs",
+              "DocumentMoniker": "C:\\Users\\nikon\\source\\repos\\HashPass_Test\\HashPass_Test\\Models\\Model1.Context.cs",
+              "RelativeDocumentMoniker": "HashPass_Test\\Models\\Model1.Context.cs",
+              "ToolTip": "C:\\Users\\nikon\\source\\repos\\HashPass_Test\\HashPass_Test\\Models\\Model1.Context.cs",
+              "RelativeToolTip": "HashPass_Test\\Models\\Model1.Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T06:00:51.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\nikon\\source\\repos\\HashPass_Test\\HashPass_Test\\Models\\Model1.edmx",
+              "RelativeDocumentMoniker": "HashPass_Test\\Models\\Model1.edmx",
+              "ToolTip": "C:\\Users\\nikon\\source\\repos\\HashPass_Test\\HashPass_Test\\Models\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "HashPass_Test\\Models\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-10-18T05:38:15.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Hash.cs",
+              "DocumentMoniker": "C:\\Users\\nikon\\source\\repos\\HashPass_Test\\HashPasswords\\Hash.cs",
+              "RelativeDocumentMoniker": "HashPasswords\\Hash.cs",
+              "ToolTip": "C:\\Users\\nikon\\source\\repos\\HashPass_Test\\HashPasswords\\Hash.cs",
+              "RelativeToolTip": "HashPasswords\\Hash.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T10:57:03.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nikon\\source\\repos\\HashPass_Test\\HashPass_Test\\Program.cs",
+              "RelativeDocumentMoniker": "HashPass_Test\\Program.cs",
+              "ToolTip": "C:\\Users\\nikon\\source\\repos\\HashPass_Test\\HashPass_Test\\Program.cs",
+              "RelativeToolTip": "HashPass_Test\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T10:54:17.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

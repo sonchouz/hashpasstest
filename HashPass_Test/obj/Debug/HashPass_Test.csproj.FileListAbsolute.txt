@@ -1,0 +1,15 @@
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\bin\Debug\HashPass_Test.exe.config
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\bin\Debug\HashPass_Test.exe
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\bin\Debug\HashPass_Test.pdb
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\bin\Debug\EntityFramework.dll
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\bin\Debug\EntityFramework.xml
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\obj\Debug\HashPass_Test.csproj.AssemblyReference.cache
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\obj\Debug\HashPass_Test.csproj.CoreCompileInputs.cache
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\obj\Debug\HashPass.DF8245BD.Up2Date
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\obj\Debug\HashPass_Test.exe
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\obj\Debug\HashPass_Test.pdb
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\bin\Debug\HashPasswords.dll
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\bin\Debug\HashPasswords.pdb
+C:\Users\nikon\source\repos\HashPass_Test\HashPass_Test\obj\Debug\HashPass_Test.exe.config
