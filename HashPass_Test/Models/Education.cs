@@ -17,13 +17,13 @@ namespace HashPass_Test.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Education()
         {
-            this.Candidates = new HashSet<Candidate>();
+            this.Candidate = new HashSet<Candidate>();
         }
     
         public int id { get; set; }
         public string edulevel { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Candidate> Candidates { get; set; }
+        public virtual ICollection<Candidate> Candidate { get; set; }
     }
 }

@@ -17,23 +17,23 @@ namespace HashPass_Test.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Employer()
         {
-            this.Applications = new HashSet<Application>();
-            this.Resumes = new HashSet<Resume>();
-            this.Vacancies = new HashSet<Vacancy>();
+            this.Applications = new HashSet<Applications>();
+            this.Resumes = new HashSet<Resumes>();
+            this.Vacancies = new HashSet<Vacancies>();
         }
     
         public int id { get; set; }
-        public string company { get; set; }
-        public System.DateTime esttime { get; set; }
+        public string companyname { get; set; }
+        public System.DateTime estdate { get; set; }
         public string city { get; set; }
         public string adres { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Application> Applications { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Resume> Resumes { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Vacancy> Vacancies { get; set; }
+        public virtual ICollection<Applications> Applications { get; set; }
         public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Resumes> Resumes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Vacancies> Vacancies { get; set; }
     }
 }

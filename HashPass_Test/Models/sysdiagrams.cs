@@ -12,16 +12,12 @@ namespace HashPass_Test.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Application
+    public partial class sysdiagrams
     {
-        public int id { get; set; }
-        public int candidateID { get; set; }
-        public int employerID { get; set; }
-        public System.DateTime appdate { get; set; }
-        public int appstatusID { get; set; }
-    
-        public virtual Appstatus Appstatus { get; set; }
-        public virtual Candidate Candidate { get; set; }
-        public virtual Employer Employer { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

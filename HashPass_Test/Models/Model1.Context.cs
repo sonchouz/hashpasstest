@@ -13,10 +13,10 @@ namespace HashPass_Test.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CadrAgencyDBEntities1 : DbContext
+    public partial class CadrAgencyDBEntities6 : DbContext
     {
-        public CadrAgencyDBEntities1()
-            : base("name=CadrAgencyDBEntities1")
+        public CadrAgencyDBEntities6()
+            : base("name=CadrAgencyDBEntities6")
         {
         }
     
@@ -25,21 +25,21 @@ namespace HashPass_Test.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Application> Applications { get; set; }
-        public virtual DbSet<Appstatus> Appstatuses { get; set; }
-        public virtual DbSet<Candidate> Candidates { get; set; }
-        public virtual DbSet<Education> Educations { get; set; }
-        public virtual DbSet<Employer> Employers { get; set; }
-        public virtual DbSet<Language> Languages { get; set; }
-        public virtual DbSet<Level> Levels { get; set; }
-        public virtual DbSet<Network> Networks { get; set; }
-        public virtual DbSet<Resume> Resumes { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<Skill> Skills { get; set; }
-        public virtual DbSet<Status> Statuses { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Vacancy> Vacancies { get; set; }
-        public virtual DbSet<Vacanciestatu> Vacanciestatus { get; set; }
+        public virtual DbSet<Applications> Applications { get; set; }
+        public virtual DbSet<Appstatuses> Appstatuses { get; set; }
+        public virtual DbSet<Candidate> Candidate { get; set; }
+        public virtual DbSet<Education> Education { get; set; }
+        public virtual DbSet<Employer> Employer { get; set; }
+        public virtual DbSet<Languages> Languages { get; set; }
+        public virtual DbSet<Levels> Levels { get; set; }
+        public virtual DbSet<Networks> Networks { get; set; }
+        public virtual DbSet<Resumes> Resumes { get; set; }
+        public virtual DbSet<Roles> Roles { get; set; }
+        public virtual DbSet<Skills> Skills { get; set; }
+        public virtual DbSet<Statuses> Statuses { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<Vacancies> Vacancies { get; set; }
+        public virtual DbSet<Vacanciestatus> Vacanciestatus { get; set; }
     }
 }

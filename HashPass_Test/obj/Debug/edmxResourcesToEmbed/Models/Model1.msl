@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище CadrAgencyDBModelContainer" CdmEntityContainer="CadrAgencyDBEntities1">
+  <EntityContainerMapping StorageEntityContainer="Хранилище CadrAgencyDBModelContainer" CdmEntityContainer="CadrAgencyDBEntities6">
     <EntitySetMapping Name="Applications">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Application">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.Applications">
         <MappingFragment StoreEntitySet="Applications">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="candidateID" ColumnName="candidateID" />
@@ -13,26 +13,27 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Appstatuses">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Appstatus">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.Appstatuses">
         <MappingFragment StoreEntitySet="Appstatuses">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="statustype" ColumnName="statustype" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Candidates">
+    <EntitySetMapping Name="Candidate">
       <EntityTypeMapping TypeName="CadrAgencyDBModel.Candidate">
-        <MappingFragment StoreEntitySet="Candidates">
+        <MappingFragment StoreEntitySet="Candidate">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="citizenship" ColumnName="citizenship" />
           <ScalarProperty Name="statusID" ColumnName="statusID" />
-          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="livingcity" ColumnName="livingcity" />
           <ScalarProperty Name="educationID" ColumnName="educationID" />
-          <ScalarProperty Name="languageID" ColumnName="languageID" />
+          <ScalarProperty Name="langID" ColumnName="langID" />
+          <ScalarProperty Name="levelID" ColumnName="levelID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Educations">
+    <EntitySetMapping Name="Education">
       <EntityTypeMapping TypeName="CadrAgencyDBModel.Education">
         <MappingFragment StoreEntitySet="Education">
           <ScalarProperty Name="id" ColumnName="id" />
@@ -40,28 +41,27 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Employers">
+    <EntitySetMapping Name="Employer">
       <EntityTypeMapping TypeName="CadrAgencyDBModel.Employer">
-        <MappingFragment StoreEntitySet="Employers">
+        <MappingFragment StoreEntitySet="Employer">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="company" ColumnName="company" />
-          <ScalarProperty Name="esttime" ColumnName="esttime" />
+          <ScalarProperty Name="companyname" ColumnName="companyname" />
+          <ScalarProperty Name="estdate" ColumnName="estdate" />
           <ScalarProperty Name="city" ColumnName="city" />
           <ScalarProperty Name="adres" ColumnName="adres" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Languages">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Language">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.Languages">
         <MappingFragment StoreEntitySet="Languages">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="lang" ColumnName="lang" />
-          <ScalarProperty Name="levelID" ColumnName="levelID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Levels">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Level">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.Levels">
         <MappingFragment StoreEntitySet="Levels">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="levelname" ColumnName="levelname" />
@@ -69,15 +69,15 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Networks">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Network">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.Networks">
         <MappingFragment StoreEntitySet="Networks">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="network1" ColumnName="network" />
+          <ScalarProperty Name="network" ColumnName="network" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Resumes">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Resume">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.Resumes">
         <MappingFragment StoreEntitySet="Resumes">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="vacancieID" ColumnName="vacancieID" />
@@ -89,7 +89,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Roles">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Role">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.Roles">
         <MappingFragment StoreEntitySet="Roles">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="roletype" ColumnName="roletype" />
@@ -97,15 +97,15 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Skills">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Skill">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.Skills">
         <MappingFragment StoreEntitySet="Skills">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="skill1" ColumnName="skill" />
+          <ScalarProperty Name="skill" ColumnName="skill" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Statuses">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Status">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.Statuses">
         <MappingFragment StoreEntitySet="Statuses">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="statustype" ColumnName="statustype" />
@@ -113,7 +113,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.sysdiagram">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -123,9 +123,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Users">
+    <EntitySetMapping Name="User">
       <EntityTypeMapping TypeName="CadrAgencyDBModel.User">
-        <MappingFragment StoreEntitySet="Users">
+        <MappingFragment StoreEntitySet="User">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="roleID" ColumnName="roleID" />
           <ScalarProperty Name="firstname" ColumnName="firstname" />
@@ -139,7 +139,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Vacancies">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Vacancy">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.Vacancies">
         <MappingFragment StoreEntitySet="Vacancies">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="vacancie" ColumnName="vacancie" />
@@ -152,7 +152,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Vacanciestatus">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Vacanciestatu">
+      <EntityTypeMapping TypeName="CadrAgencyDBModel.Vacanciestatus">
         <MappingFragment StoreEntitySet="Vacanciestatus">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="statustype" ColumnName="statustype" />

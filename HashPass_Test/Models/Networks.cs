@@ -12,17 +12,18 @@ namespace HashPass_Test.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Resume
+    public partial class Networks
     {
-        public int id { get; set; }
-        public int vacancieID { get; set; }
-        public int candidateID { get; set; }
-        public int employerID { get; set; }
-        public System.DateTime publicationdate { get; set; }
-        public int looks { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Networks()
+        {
+            this.User = new HashSet<User>();
+        }
     
-        public virtual Candidate Candidate { get; set; }
-        public virtual Employer Employer { get; set; }
-        public virtual Vacancy Vacancy { get; set; }
+        public int id { get; set; }
+        public string network { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> User { get; set; }
     }
 }

@@ -17,24 +17,23 @@ namespace HashPass_Test.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Candidate()
         {
-            this.Applications = new HashSet<Application>();
-            this.Resumes = new HashSet<Resume>();
+            this.Applications = new HashSet<Applications>();
         }
     
         public int id { get; set; }
         public string citizenship { get; set; }
         public int statusID { get; set; }
-        public string city { get; set; }
+        public string livingcity { get; set; }
         public int educationID { get; set; }
-        public int languageID { get; set; }
+        public Nullable<int> langID { get; set; }
+        public Nullable<int> levelID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Application> Applications { get; set; }
+        public virtual ICollection<Applications> Applications { get; set; }
         public virtual Education Education { get; set; }
-        public virtual Language Language { get; set; }
-        public virtual Status Status { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Resume> Resumes { get; set; }
+        public virtual Languages Languages { get; set; }
+        public virtual Levels Levels { get; set; }
+        public virtual Statuses Statuses { get; set; }
         public virtual User User { get; set; }
     }
 }

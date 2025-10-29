@@ -12,20 +12,18 @@ namespace HashPass_Test.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Language
+    public partial class Levels
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Language()
+        public Levels()
         {
-            this.Candidates = new HashSet<Candidate>();
+            this.Candidate = new HashSet<Candidate>();
         }
     
         public int id { get; set; }
-        public string lang { get; set; }
-        public int levelID { get; set; }
+        public string levelname { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Candidate> Candidates { get; set; }
-        public virtual Level Level { get; set; }
+        public virtual ICollection<Candidate> Candidate { get; set; }
     }
 }

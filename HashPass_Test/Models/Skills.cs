@@ -12,18 +12,18 @@ namespace HashPass_Test.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Appstatus
+    public partial class Skills
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Appstatus()
+        public Skills()
         {
-            this.Applications = new HashSet<Application>();
+            this.Vacancies = new HashSet<Vacancies>();
         }
     
         public int id { get; set; }
-        public string statustype { get; set; }
+        public string skill { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Application> Applications { get; set; }
+        public virtual ICollection<Vacancies> Vacancies { get; set; }
     }
 }

@@ -12,26 +12,16 @@ namespace HashPass_Test.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Vacancy
+    public partial class Resumes
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Vacancy()
-        {
-            this.Resumes = new HashSet<Resume>();
-        }
-    
         public int id { get; set; }
-        public string vacancie { get; set; }
-        public string describing { get; set; }
-        public int salary { get; set; }
-        public int skillID { get; set; }
-        public int statusID { get; set; }
+        public int vacancieID { get; set; }
+        public int candidateID { get; set; }
         public int employerID { get; set; }
+        public System.DateTime publicationdate { get; set; }
+        public int looks { get; set; }
     
         public virtual Employer Employer { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Resume> Resumes { get; set; }
-        public virtual Skill Skill { get; set; }
-        public virtual Vacanciestatu Vacanciestatu { get; set; }
+        public virtual Vacancies Vacancies { get; set; }
     }
 }

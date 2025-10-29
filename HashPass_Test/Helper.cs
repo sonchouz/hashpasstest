@@ -10,25 +10,33 @@ namespace HashPass_Test
 {
     public class Helper
     {
-        private static CadrAgencyDBEntities1 _context;
+        private static CadrAgencyDBEntities6 _context;
 
-        public static CadrAgencyDBEntities1 GetContext()
+        public static CadrAgencyDBEntities6 GetContext()
         {
             if(_context == null )
             {
-                _context = new CadrAgencyDBEntities1();
+                _context = new CadrAgencyDBEntities6();
             }
             return _context;
         }
        
         public void CreateUser(User user)
         {
-
-            user.hashpass = Hash.gethashpass(user.hashpass);
-            _context.Users.Add(user); 
-            _context.SaveChanges(); 
+            _context.User.Add(user); 
+            _context.SaveChanges();
+        }
+        public void CreateCandidate(Candidate candidate)
+        {
+            _context.Candidate.Add(candidate);
+            _context.SaveChanges();
         }
 
+        public void CreateEmployer(Employer employer)
+        {
+            _context.Employer.Add(employer);
+            _context.SaveChanges();
+        }
         public void UpdateUser(User user)
         { 
           
@@ -38,25 +46,22 @@ namespace HashPass_Test
 
         public void RemoveUser(int idUser)
         {
-            var users = _context.Users.Find(idUser); 
-            _context.Users.Remove(users); 
+            var users = _context.User.Find(idUser); 
+            _context.User.Remove(users); 
             _context.SaveChanges();
         }
 
         public List<User> FilterUsers()
         {
-            return _context.Users.Where(x => x.roleID == 2).ToList();
+            return _context.User.Where(x => x.roleID == 2).ToList();
         }
 
         public List<User> SortUsers()
         {
-            return _context.Users.OrderBy(x => x.birthday).ToList();
+            return _context.User.OrderBy(x => x.birthday).ToList();
         }
 
-        public string GetRole(User user)
-        {
-            return user.Role.roletype.ToString();
-        }
+       
 
     }
 }
