@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище CadrAgencyDBModelContainer" CdmEntityContainer="CadrAgencyDBEntities6">
+  <EntityContainerMapping StorageEntityContainer="Хранилище CadrAgencyModelContainer" CdmEntityContainer="CadrAgencyEntities">
     <EntitySetMapping Name="Applications">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Applications">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Applications">
         <MappingFragment StoreEntitySet="Applications">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="candidateID" ColumnName="candidateID" />
@@ -13,7 +13,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Appstatuses">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Appstatuses">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Appstatuses">
         <MappingFragment StoreEntitySet="Appstatuses">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="statustype" ColumnName="statustype" />
@@ -21,7 +21,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Candidate">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Candidate">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Candidate">
         <MappingFragment StoreEntitySet="Candidate">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="citizenship" ColumnName="citizenship" />
@@ -34,7 +34,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Education">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Education">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Education">
         <MappingFragment StoreEntitySet="Education">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="edulevel" ColumnName="edulevel" />
@@ -42,7 +42,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Employer">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Employer">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Employer">
         <MappingFragment StoreEntitySet="Employer">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="companyname" ColumnName="companyname" />
@@ -53,7 +53,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Languages">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Languages">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Languages">
         <MappingFragment StoreEntitySet="Languages">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="lang" ColumnName="lang" />
@@ -61,7 +61,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Levels">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Levels">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Levels">
         <MappingFragment StoreEntitySet="Levels">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="levelname" ColumnName="levelname" />
@@ -69,7 +69,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Networks">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Networks">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Networks">
         <MappingFragment StoreEntitySet="Networks">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="network" ColumnName="network" />
@@ -77,7 +77,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Resumes">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Resumes">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Resumes">
         <MappingFragment StoreEntitySet="Resumes">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="vacancieID" ColumnName="vacancieID" />
@@ -89,7 +89,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Roles">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Roles">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Roles">
         <MappingFragment StoreEntitySet="Roles">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="roletype" ColumnName="roletype" />
@@ -97,7 +97,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Skills">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Skills">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Skills">
         <MappingFragment StoreEntitySet="Skills">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="skill" ColumnName="skill" />
@@ -105,7 +105,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Statuses">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Statuses">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Statuses">
         <MappingFragment StoreEntitySet="Statuses">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="statustype" ColumnName="statustype" />
@@ -113,7 +113,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.sysdiagrams">
+      <EntityTypeMapping TypeName="CadrAgencyModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -124,7 +124,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="User">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.User">
+      <EntityTypeMapping TypeName="CadrAgencyModel.User">
         <MappingFragment StoreEntitySet="User">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="roleID" ColumnName="roleID" />
@@ -139,7 +139,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Vacancies">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Vacancies">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Vacancies">
         <MappingFragment StoreEntitySet="Vacancies">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="vacancie" ColumnName="vacancie" />
@@ -152,7 +152,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Vacanciestatus">
-      <EntityTypeMapping TypeName="CadrAgencyDBModel.Vacanciestatus">
+      <EntityTypeMapping TypeName="CadrAgencyModel.Vacanciestatus">
         <MappingFragment StoreEntitySet="Vacanciestatus">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="statustype" ColumnName="statustype" />

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище CadrAgencyDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище CadrAgencyModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Applications">
           <Key>
             <PropertyRef Name="id" />
@@ -147,7 +147,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="statustype" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Applicati__appst__5FB337D6">
+        <Association Name="FK__Applicati__appst__52593CB8">
           <End Role="Appstatuses" Type="Self.Appstatuses" Multiplicity="1" />
           <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
           <ReferentialConstraint>
@@ -159,7 +159,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Resumes__vacanci__59063A47">
+        <Association Name="FK__Resumes__vacanci__5AEE82B9">
           <End Role="Vacancies" Type="Self.Vacancies" Multiplicity="1" />
           <End Role="Resumes" Type="Self.Resumes" Multiplicity="*" />
           <ReferentialConstraint>
@@ -171,7 +171,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vacancies__skill__5441852A">
+        <Association Name="FK__Vacancies__skill__5DCAEF64">
           <End Role="Skills" Type="Self.Skills" Multiplicity="1" />
           <End Role="Vacancies" Type="Self.Vacancies" Multiplicity="*" />
           <ReferentialConstraint>
@@ -183,7 +183,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vacancies__statu__5535A963">
+        <Association Name="FK__Vacancies__statu__5EBF139D">
           <End Role="Vacanciestatus" Type="Self.Vacanciestatus" Multiplicity="1" />
           <End Role="Vacancies" Type="Self.Vacancies" Multiplicity="*" />
           <ReferentialConstraint>
@@ -315,6 +315,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_User_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="roleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Vacancies_Employer">
           <End Role="Employer" Type="Self.Employer" Multiplicity="1" />
           <End Role="Vacancies" Type="Self.Vacancies" Multiplicity="*" />
@@ -327,7 +339,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище CadrAgencyDBModelContainer">
+        <EntityContainer Name="Хранилище CadrAgencyModelContainer">
           <EntitySet Name="Applications" EntityType="Self.Applications" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Appstatuses" EntityType="Self.Appstatuses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Candidate" EntityType="Self.Candidate" Schema="dbo" store:Type="Tables" />
@@ -344,19 +356,19 @@
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vacancies" EntityType="Self.Vacancies" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vacanciestatus" EntityType="Self.Vacanciestatus" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Applicati__appst__5FB337D6" Association="Self.FK__Applicati__appst__5FB337D6">
+          <AssociationSet Name="FK__Applicati__appst__52593CB8" Association="Self.FK__Applicati__appst__52593CB8">
             <End Role="Appstatuses" EntitySet="Appstatuses" />
             <End Role="Applications" EntitySet="Applications" />
           </AssociationSet>
-          <AssociationSet Name="FK__Resumes__vacanci__59063A47" Association="Self.FK__Resumes__vacanci__59063A47">
+          <AssociationSet Name="FK__Resumes__vacanci__5AEE82B9" Association="Self.FK__Resumes__vacanci__5AEE82B9">
             <End Role="Vacancies" EntitySet="Vacancies" />
             <End Role="Resumes" EntitySet="Resumes" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vacancies__skill__5441852A" Association="Self.FK__Vacancies__skill__5441852A">
+          <AssociationSet Name="FK__Vacancies__skill__5DCAEF64" Association="Self.FK__Vacancies__skill__5DCAEF64">
             <End Role="Skills" EntitySet="Skills" />
             <End Role="Vacancies" EntitySet="Vacancies" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vacancies__statu__5535A963" Association="Self.FK__Vacancies__statu__5535A963">
+          <AssociationSet Name="FK__Vacancies__statu__5EBF139D" Association="Self.FK__Vacancies__statu__5EBF139D">
             <End Role="Vacanciestatus" EntitySet="Vacanciestatus" />
             <End Role="Vacancies" EntitySet="Vacancies" />
           </AssociationSet>
@@ -400,6 +412,10 @@
             <End Role="Networks" EntitySet="Networks" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
+          <AssociationSet Name="FK_User_Roles" Association="Self.FK_User_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
           <AssociationSet Name="FK_Vacancies_Employer" Association="Self.FK_Vacancies_Employer">
             <End Role="Employer" EntitySet="Employer" />
             <End Role="Vacancies" EntitySet="Vacancies" />
@@ -409,7 +425,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="CadrAgencyDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="CadrAgencyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Applications">
           <Key>
             <PropertyRef Name="id" />
@@ -419,7 +435,7 @@
           <Property Name="employerID" Type="Int32" Nullable="false" />
           <Property Name="appdate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="appstatusID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Appstatuses" Relationship="Self.FK__Applicati__appst__5FB337D6" FromRole="Applications" ToRole="Appstatuses" />
+          <NavigationProperty Name="Appstatuses" Relationship="Self.FK__Applicati__appst__52593CB8" FromRole="Applications" ToRole="Appstatuses" />
           <NavigationProperty Name="Candidate" Relationship="Self.FK_Applications_Candidate" FromRole="Applications" ToRole="Candidate" />
           <NavigationProperty Name="Employer" Relationship="Self.FK_Applications_Employer" FromRole="Applications" ToRole="Employer" />
         </EntityType>
@@ -429,7 +445,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="statustype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Applications" Relationship="Self.FK__Applicati__appst__5FB337D6" FromRole="Appstatuses" ToRole="Applications" />
+          <NavigationProperty Name="Applications" Relationship="Self.FK__Applicati__appst__52593CB8" FromRole="Appstatuses" ToRole="Applications" />
         </EntityType>
         <EntityType Name="Candidate">
           <Key>
@@ -506,7 +522,7 @@
           <Property Name="publicationdate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="looks" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Employer" Relationship="Self.FK_Resumes_Employer" FromRole="Resumes" ToRole="Employer" />
-          <NavigationProperty Name="Vacancies" Relationship="Self.FK__Resumes__vacanci__59063A47" FromRole="Resumes" ToRole="Vacancies" />
+          <NavigationProperty Name="Vacancies" Relationship="Self.FK__Resumes__vacanci__5AEE82B9" FromRole="Resumes" ToRole="Vacancies" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -514,6 +530,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="roletype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK_User_Roles" FromRole="Roles" ToRole="User" />
         </EntityType>
         <EntityType Name="Skills">
           <Key>
@@ -521,7 +538,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="skill" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Vacancies" Relationship="Self.FK__Vacancies__skill__5441852A" FromRole="Skills" ToRole="Vacancies" />
+          <NavigationProperty Name="Vacancies" Relationship="Self.FK__Vacancies__skill__5DCAEF64" FromRole="Skills" ToRole="Vacancies" />
         </EntityType>
         <EntityType Name="Statuses">
           <Key>
@@ -557,6 +574,7 @@
           <NavigationProperty Name="Candidate" Relationship="Self.FK_Candidate_User" FromRole="User" ToRole="Candidate" />
           <NavigationProperty Name="Employer" Relationship="Self.FK_Employer_User" FromRole="User" ToRole="Employer" />
           <NavigationProperty Name="Networks" Relationship="Self.FK_User_Networks" FromRole="User" ToRole="Networks" />
+          <NavigationProperty Name="Roles" Relationship="Self.FK_User_Roles" FromRole="User" ToRole="Roles" />
         </EntityType>
         <EntityType Name="Vacancies">
           <Key>
@@ -570,9 +588,9 @@
           <Property Name="statusID" Type="Int32" Nullable="false" />
           <Property Name="employerID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Employer" Relationship="Self.FK_Vacancies_Employer" FromRole="Vacancies" ToRole="Employer" />
-          <NavigationProperty Name="Resumes" Relationship="Self.FK__Resumes__vacanci__59063A47" FromRole="Vacancies" ToRole="Resumes" />
-          <NavigationProperty Name="Skills" Relationship="Self.FK__Vacancies__skill__5441852A" FromRole="Vacancies" ToRole="Skills" />
-          <NavigationProperty Name="Vacanciestatus" Relationship="Self.FK__Vacancies__statu__5535A963" FromRole="Vacancies" ToRole="Vacanciestatus" />
+          <NavigationProperty Name="Resumes" Relationship="Self.FK__Resumes__vacanci__5AEE82B9" FromRole="Vacancies" ToRole="Resumes" />
+          <NavigationProperty Name="Skills" Relationship="Self.FK__Vacancies__skill__5DCAEF64" FromRole="Vacancies" ToRole="Skills" />
+          <NavigationProperty Name="Vacanciestatus" Relationship="Self.FK__Vacancies__statu__5EBF139D" FromRole="Vacancies" ToRole="Vacanciestatus" />
         </EntityType>
         <EntityType Name="Vacanciestatus">
           <Key>
@@ -580,9 +598,9 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="statustype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Vacancies" Relationship="Self.FK__Vacancies__statu__5535A963" FromRole="Vacanciestatus" ToRole="Vacancies" />
+          <NavigationProperty Name="Vacancies" Relationship="Self.FK__Vacancies__statu__5EBF139D" FromRole="Vacanciestatus" ToRole="Vacancies" />
         </EntityType>
-        <Association Name="FK__Applicati__appst__5FB337D6">
+        <Association Name="FK__Applicati__appst__52593CB8">
           <End Role="Appstatuses" Type="Self.Appstatuses" Multiplicity="1" />
           <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
           <ReferentialConstraint>
@@ -726,7 +744,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Resumes__vacanci__59063A47">
+        <Association Name="FK__Resumes__vacanci__5AEE82B9">
           <End Role="Vacancies" Type="Self.Vacancies" Multiplicity="1" />
           <End Role="Resumes" Type="Self.Resumes" Multiplicity="*" />
           <ReferentialConstraint>
@@ -738,7 +756,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vacancies__skill__5441852A">
+        <Association Name="FK_User_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="roleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vacancies__skill__5DCAEF64">
           <End Role="Skills" Type="Self.Skills" Multiplicity="1" />
           <End Role="Vacancies" Type="Self.Vacancies" Multiplicity="*" />
           <ReferentialConstraint>
@@ -750,7 +780,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vacancies__statu__5535A963">
+        <Association Name="FK__Vacancies__statu__5EBF139D">
           <End Role="Vacanciestatus" Type="Self.Vacanciestatus" Multiplicity="1" />
           <End Role="Vacancies" Type="Self.Vacancies" Multiplicity="*" />
           <ReferentialConstraint>
@@ -762,7 +792,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="CadrAgencyDBEntities6" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CadrAgencyEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Applications" EntityType="Self.Applications" />
           <EntitySet Name="Appstatuses" EntityType="Self.Appstatuses" />
           <EntitySet Name="Candidate" EntityType="Self.Candidate" />
@@ -779,7 +809,7 @@
           <EntitySet Name="User" EntityType="Self.User" />
           <EntitySet Name="Vacancies" EntityType="Self.Vacancies" />
           <EntitySet Name="Vacanciestatus" EntityType="Self.Vacanciestatus" />
-          <AssociationSet Name="FK__Applicati__appst__5FB337D6" Association="Self.FK__Applicati__appst__5FB337D6">
+          <AssociationSet Name="FK__Applicati__appst__52593CB8" Association="Self.FK__Applicati__appst__52593CB8">
             <End Role="Appstatuses" EntitySet="Appstatuses" />
             <End Role="Applications" EntitySet="Applications" />
           </AssociationSet>
@@ -827,15 +857,19 @@
             <End Role="Networks" EntitySet="Networks" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
-          <AssociationSet Name="FK__Resumes__vacanci__59063A47" Association="Self.FK__Resumes__vacanci__59063A47">
+          <AssociationSet Name="FK__Resumes__vacanci__5AEE82B9" Association="Self.FK__Resumes__vacanci__5AEE82B9">
             <End Role="Vacancies" EntitySet="Vacancies" />
             <End Role="Resumes" EntitySet="Resumes" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vacancies__skill__5441852A" Association="Self.FK__Vacancies__skill__5441852A">
+          <AssociationSet Name="FK_User_Roles" Association="Self.FK_User_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vacancies__skill__5DCAEF64" Association="Self.FK__Vacancies__skill__5DCAEF64">
             <End Role="Skills" EntitySet="Skills" />
             <End Role="Vacancies" EntitySet="Vacancies" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vacancies__statu__5535A963" Association="Self.FK__Vacancies__statu__5535A963">
+          <AssociationSet Name="FK__Vacancies__statu__5EBF139D" Association="Self.FK__Vacancies__statu__5EBF139D">
             <End Role="Vacanciestatus" EntitySet="Vacanciestatus" />
             <End Role="Vacancies" EntitySet="Vacancies" />
           </AssociationSet>
@@ -845,9 +879,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище CadrAgencyDBModelContainer" CdmEntityContainer="CadrAgencyDBEntities6">
+        <EntityContainerMapping StorageEntityContainer="Хранилище CadrAgencyModelContainer" CdmEntityContainer="CadrAgencyEntities">
           <EntitySetMapping Name="Applications">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Applications">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Applications">
               <MappingFragment StoreEntitySet="Applications">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="candidateID" ColumnName="candidateID" />
@@ -858,7 +892,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Appstatuses">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Appstatuses">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Appstatuses">
               <MappingFragment StoreEntitySet="Appstatuses">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="statustype" ColumnName="statustype" />
@@ -866,7 +900,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Candidate">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Candidate">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Candidate">
               <MappingFragment StoreEntitySet="Candidate">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="citizenship" ColumnName="citizenship" />
@@ -879,7 +913,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Education">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Education">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Education">
               <MappingFragment StoreEntitySet="Education">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="edulevel" ColumnName="edulevel" />
@@ -887,7 +921,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Employer">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Employer">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Employer">
               <MappingFragment StoreEntitySet="Employer">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="companyname" ColumnName="companyname" />
@@ -898,7 +932,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Languages">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Languages">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Languages">
               <MappingFragment StoreEntitySet="Languages">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="lang" ColumnName="lang" />
@@ -906,7 +940,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Levels">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Levels">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Levels">
               <MappingFragment StoreEntitySet="Levels">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="levelname" ColumnName="levelname" />
@@ -914,7 +948,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Networks">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Networks">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Networks">
               <MappingFragment StoreEntitySet="Networks">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="network" ColumnName="network" />
@@ -922,7 +956,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Resumes">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Resumes">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Resumes">
               <MappingFragment StoreEntitySet="Resumes">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="vacancieID" ColumnName="vacancieID" />
@@ -934,7 +968,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Roles">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Roles">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Roles">
               <MappingFragment StoreEntitySet="Roles">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="roletype" ColumnName="roletype" />
@@ -942,7 +976,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Skills">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Skills">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Skills">
               <MappingFragment StoreEntitySet="Skills">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="skill" ColumnName="skill" />
@@ -950,7 +984,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Statuses">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Statuses">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Statuses">
               <MappingFragment StoreEntitySet="Statuses">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="statustype" ColumnName="statustype" />
@@ -958,7 +992,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.sysdiagrams">
+            <EntityTypeMapping TypeName="CadrAgencyModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -969,7 +1003,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="User">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.User">
+            <EntityTypeMapping TypeName="CadrAgencyModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="roleID" ColumnName="roleID" />
@@ -984,7 +1018,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Vacancies">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Vacancies">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Vacancies">
               <MappingFragment StoreEntitySet="Vacancies">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="vacancie" ColumnName="vacancie" />
@@ -997,7 +1031,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Vacanciestatus">
-            <EntityTypeMapping TypeName="CadrAgencyDBModel.Vacanciestatus">
+            <EntityTypeMapping TypeName="CadrAgencyModel.Vacanciestatus">
               <MappingFragment StoreEntitySet="Vacanciestatus">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="statustype" ColumnName="statustype" />

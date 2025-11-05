@@ -27,5 +27,6 @@ namespace HashPass_Test.Models
         public virtual Candidate Candidate { get; set; }
         public virtual Employer Employer { get; set; }
         public virtual Networks Networks { get; set; }
+        public virtual Roles Roles { get; set; }
     }
 }

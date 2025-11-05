@@ -4,38 +4,39 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2679bf3a430d4e89af1a22e9017d93bb" Name="Diagram1">
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Applications" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Appstatuses" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Candidate" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Education" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Employer" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Languages" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Levels" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Networks" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Resumes" Width="1.5" PointX="7.5" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Roles" Width="1.5" PointX="7.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Skills" Width="1.5" PointX="8.25" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Statuses" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.User" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Vacancies" Width="1.5" PointX="10.5" PointY="10.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadrAgencyDBModel.Vacanciestatus" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK__Applicati__appst__5FB337D6" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK_Applications_Candidate" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK_Applications_Employer" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK_Candidate_Education" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK_Candidate_Languages" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK_Candidate_Levels" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK_Candidate_Statuses" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK_Candidate_User" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK_Employer_User" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK_Resumes_Employer" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK_Vacancies_Employer" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK_User_Networks" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK__Resumes__vacanci__59063A47" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK__Vacancies__skill__5441852A" ManuallyRouted="false" />
-        <AssociationConnector Association="CadrAgencyDBModel.FK__Vacancies__statu__5535A963" ManuallyRouted="false" />
+      <Diagram DiagramId="ac33cf88daf240728c6edbe6b13e37e0" Name="Diagram1">
+        <EntityTypeShape EntityType="CadrAgencyModel.Applications" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Appstatuses" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Candidate" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Education" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Employer" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Languages" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Levels" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Networks" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Resumes" Width="1.5" PointX="7.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Roles" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Skills" Width="1.5" PointX="8.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Statuses" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.User" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Vacancies" Width="1.5" PointX="10.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadrAgencyModel.Vacanciestatus" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
+        <AssociationConnector Association="CadrAgencyModel.FK__Applicati__appst__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_Applications_Candidate" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_Applications_Employer" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_Candidate_Education" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_Candidate_Languages" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_Candidate_Levels" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_Candidate_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_Candidate_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_Employer_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_Resumes_Employer" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_Vacancies_Employer" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_User_Networks" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK__Resumes__vacanci__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK_User_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK__Vacancies__skill__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="CadrAgencyModel.FK__Vacancies__statu__5EBF139D" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

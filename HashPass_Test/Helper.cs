@@ -10,13 +10,13 @@ namespace HashPass_Test
 {
     public class Helper
     {
-        private static CadrAgencyDBEntities6 _context;
+        private static CadrAgencyEntities _context;
 
-        public static CadrAgencyDBEntities6 GetContext()
+        public static CadrAgencyEntities GetContext()
         {
             if(_context == null )
             {
-                _context = new CadrAgencyDBEntities6();
+                _context = new CadrAgencyEntities();
             }
             return _context;
         }

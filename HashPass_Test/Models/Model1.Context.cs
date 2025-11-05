@@ -13,10 +13,10 @@ namespace HashPass_Test.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CadrAgencyDBEntities6 : DbContext
+    public partial class CadrAgencyEntities : DbContext
     {
-        public CadrAgencyDBEntities6()
-            : base("name=CadrAgencyDBEntities6")
+        public CadrAgencyEntities()
+            : base("name=CadrAgencyEntities")
         {
         }
     
